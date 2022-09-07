@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick sort</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aos.css">
+    <link rel="icon" type="image/x-icon" href="pavicon1.webp">
+</head>
+<body>
+    <div class="intro">
+        QUICK SORT ALGORITHM
+    </div>
+
+    <div class="cover">
+        <div class="step" id="step1">
+            <div class="step_display">
+                <ul>
+                    <li><span>4</span></li>
+                    <li><span>8</span></li>
+                    <li><span>2</span></li>
+                    <li><span>5</span></li>
+                    <li class="active"><span>6</span></li>
+                    <li><span>1</span></li>
+                    <li><span>7</span></li>
+                    <li><span>9</span></li>
+                    <li><span>3</span></li>
+                </ul>
+            </div>
+
+            <div class="step_des">
+                <h4>Starting step</h4>
+                <p> - First, we have 9 different integers whose value given by those column on the left</p>
+                <p> - We have to chose the pivot number of those numbers. Normally, the median of the array will be the first pivot</p>
+                <p> - On this example, number 6 will be our first pivot</p>
+            </div>
+        </div>
+
+        <div class="step" id="step2">
+            <div class="step_display">
+                <ul>
+                    <li><span>4</span></li>
+                    <li><span>2</span></li>
+                    <li class="active"><span>5</span></li>
+                    <li><span>1</span></li>
+                    <li><span>3</span></li>
+                    <li class="activated"><span>6</span></li>
+                    <li><span>7</span></li>
+                    <li><span>9</span></li>
+                    <li><span>8</span></li>
+                </ul>
+            </div>
+
+            <div class="step_des">
+                <h4>After that</h4>
+                <p> - On the left side of the chosen pivot, those numbers which smaller than the pivot will be kept and those bigger ones will be moved to the other side.
+                    On the other side, remained numbers will be the number that bigger than pivot.
+                </p>
+                <p> - After this step we will have the order like the bar chart on the left</p>
+                <p> - To continue, we will repeat the same process with the left side of the first pivot (6), and the new pivot will be (5)</p>
+            </div>
+        </div>
+
+        <div class="step" id="step3">
+            <div class="step_display">
+                <ul>
+                    <li><span>4</span></li>
+                    <li><span>2</span></li>
+                    <li><span>1</span></li>
+                    <li><span>3</span></li>
+                    <li class="activated"><span>5</span></li>
+                    <li class="activated"><span>6</span></li>
+                    <li><span>7</span></li>
+                    <li class="active"><span>9</span></li>
+                    <li><span>8</span></li>
+                </ul>
+            </div>
+
+            <div class="step_des">
+                <h4>Next </h4>
+                <p> - Do the same things with the other side by chosing the pivot (9)
+                </p>
+                <p></p>
+                <!-- <p> - To continue, we will repeat the same process with the left side of the first pivot (6), and the new pivot will be (5)</p> -->
+            </div>
+        </div>
+
+        <div class="step" id="step4">
+            <div class="step_display">
+                <ul>
+                    <li><span>1</span></li>
+                    <li class="active"><span>4</span></li>
+                    <li><span>2</span></li>
+                    <li><span>3</span></li>
+                    <li class="activated"><span>5</span></li>
+                    <li class="activated"><span>6</span></li>
+                    <li class="activated"><span>7</span></li>
+                    <li class="activated"><span>8</span></li>
+                    <li class="activated"><span>9</span></li>
+                </ul>
+            </div>
+
+            <div class="step_des">
+                <h4>Next to it</h4>
+                <p> - After the same step as the previous ones, we will have this order. As can be clearly recognized, the right side have the correct order.
+                    But the program will still run one more step, which is creating the same process to sort the remained pair of numbers (7 and 8), but those numbers are in
+                    the correct order so there will be no change. 
+                </p>
+                <p></p>
+                <!-- <p> - To continue, we will repeat the same process with the left side of the first pivot (6), and the new pivot will be (5)</p> -->
+            </div>
+        </div>
+
+        <div class="step" id="step5">
+            <div class="step_display">
+                <ul>
+                    <li><span>2</span></li>
+                    <li class="active"><span>1</span></li>
+                    <li><span>3</span></li>
+                    <li class="activated"><span>4</span></li>
+                    <li class="activated"><span>5</span></li>
+                    <li class="activated"><span>6</span></li>
+                    <li class="activated"><span>7</span></li>
+                    <li class="activated"><span>8</span></li>
+                    <li class="activated"><span>9</span></li>
+                </ul>
+            </div>
+
+            <div class="step_des">
+                <h4>And ... </h4>
+                <p> -  
+                </p>
+                <p></p>
+                <!-- <p> - To continue, we will repeat the same process with the left side of the first pivot (6), and the new pivot will be (5)</p> -->
+            </div>
+        </div>
+
+        <div class="step" id="step6">
+            <div class="step_display">
+                <ul>
+                    <li class="activated"><span>1</span></li>
+                    <li class="activated"><span>2</span></li>
+                    <li class="activated"><span>3</span></li>
+                    <li class="activated"><span>4</span></li>
+                    <li class="activated"><span>5</span></li>
+                    <li class="activated"><span>6</span></li>
+                    <li class="activated"><span>7</span></li>
+                    <li class="activated"><span>8</span></li>
+                    <li class="activated"><span>9</span></li>
+                </ul>
+            </div>
+
+            <div class="step_des">
+                <h4>We have done</h4>
+                <p> -  
+                </p>
+                <p></p>
+                <!-- <p> - To continue, we will repeat the same process with the left side of the first pivot (6), and the new pivot will be (5)</p> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="cover quickSort_img">
+        <div class="quickSort_img-pic">
+            <img src="img.png" alt="">
+        </div>
+
+        <div class="quickSort_img-des">
+            <p>Example using picture</p>
+        </div>
+    </div>
+
+    <div class="direct">
+        <div class="direct_button" id="goBack">Previous step</div>
+        <div class="direct_button" id="go">Next step</div>
+        <div class="direct_button" id="toTop">Go back</div>
+        <div class="direct_button" id="language">Language change</div>
+    </div>
+</body>
+
+<script src="main.js"></script>
+<script src="aos.js"></script>
+</html>
